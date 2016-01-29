@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{meta_title}}</title>
+    {{> meta}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/uno-zen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "fonts/font-awesome/css/font-awesome.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/highlight/monokai_sublime.css"}}" />
+    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    {{> aside}}
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        {{{body}}}
+        {{> footer}}
+      </section>
+    </main>
+    {{ghost_foot}}
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{asset "js/uno-zen.js"}}" type="text/javascript" charset="utf-8"></script>
+    {{> google-analytics}}
+  </body>
+</html>
